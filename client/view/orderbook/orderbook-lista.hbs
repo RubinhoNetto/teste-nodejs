@@ -1,38 +1,41 @@
-<br>
+<br> 
+{{#if result}}
+{{else}}
+  <div class="alert alert-danger" role="alert">
+    {{message}}
+  </div>
+{{/if}}
+<h2>{{title}}</h2>
+<br> 
 <div class="row">
 	<div class="col-md-3">
 		<form method="POST">
 			<div class="form-group">
-				<select class="form-control form-control-sm" name="order">
-					<option value="bids">BIDS</option>
-					<option value="asks">ASKS</option>
-				</select>
-			</div>
-			<div class="form-group">
+				<label class="form-control-label">Exchange</label>
 				<select class="form-control form-control-sm" name="exchange">
-					<option value="" > Exchange </option>
-					<option value="ARN"> Arena Bitcoin (ARN) </option>
-          <option value="B2U"> BitcoinToYou (B2U) </option>
-          <option value="BAS"> Basebit (BAS) </option>
-          <option value="BIV"> Bitinvest (BIV) </option>
-          <option value="BSQ"> Bitsquare (BSQ) </option>
-          <option value="FLW"> flowBTC (FLW) </option>
-          <option value="FOX"> FoxBit (FOX) </option>
-          <option value="LOC"> LocalBitcoins (LOC) </option>
-          <option value="MBT"> Mercado Bitcoin (MBT) </option>
-          <option value="NEG"> Negocie Coins (NEG) </option>
-          <option value="PAX"> Paxful (PAX) </option>
+					<option value="" > Exchanges </option>
+					<option {{#if ARN}} selected {{/if}} value="ARN"> Arena Bitcoin (ARN) </option>
+          <option {{#if B2U}} selected {{/if}} value="B2U"> BitcoinToYou (B2U) </option>
+          <option {{#if BAS}} selected {{/if}} value="BAS"> Basebit (BAS) </option>
+          <option {{#if BIV}} selected {{/if}} value="BIV"> Bitinvest (BIV) </option>
+          <option {{#if BSQ}} selected {{/if}} value="BSQ"> Bitsquare (BSQ) </option>
+          <option {{#if FLW}} selected {{/if}} value="FLW"> flowBTC (FLW) </option>
+          <option {{#if FOX}} selected {{/if}} value="FOX"> FoxBit (FOX) </option>
+          <option {{#if LOC}} selected {{/if}} value="LOC"> LocalBitcoins (LOC) </option>
+          <option {{#if MBT}} selected {{/if}} value="MBT"> Mercado Bitcoin (MBT) </option>
+          <option {{#if NEG}} selected {{/if}} value="NEG"> Negocie Coins (NEG) </option>
+          <option {{#if PAX}} selected {{/if}} value="PAX"> Paxful (PAX) </option>
 				</select>
 			</div>
       <div class="form-group">
         <label class="form-control-label">Valor unitário</label>
         <div class="row">
           <div class="col">
-            <input type="number" class="form-control form-control-sm" name="valor_ini" min="0" max="99999">
+            <input type="number" class="form-control form-control-sm" name="valor_ini" min="0" max="99999" value="{{filter.valor_ini}}">
           </div>
           até
           <div class="col">
-            <input type="number" class="form-control form-control-sm" name="valor_end" min="0" max="99999">
+            <input type="number" class="form-control form-control-sm" name="valor_end" min="0" max="99999" value="{{filter.valor_end}}">
           </div>
         </div>
       </div>
@@ -40,24 +43,26 @@
         <label class="form-control-label">Quantidade</label>
         <div class="row">
           <div class="col">
-            <input type="number" class="form-control form-control-sm" name="qtd_ini" step="0.0000005" min="0" max="50">
+            <input type="number" class="form-control form-control-sm" name="qtd_ini" step="0.01" min="0" max="99999" value="{{filter.qtd_ini}}">
           </div>
           até
           <div class="col">
-            <input type="number" class="form-control form-control-sm" name="qtd_end" step="0.0000005" min="0" max="50">
+            <input type="number" class="form-control form-control-sm" name="qtd_end" step="0.01" min="0" max="99999" value="{{filter.qtd_end}}">
           </div>
         </div>
       </div>
 			<button type="submit" class="btn btn-dark">Filtrar</button>
 		</form>
+    <hr>
+    <span>{{message}}</span>
 	</div>
 	<div class="col-md-9">
 		<table class="table table-hover table-inverse">
 			<thead>
 				<tr>
-					<th>Exchanges</th>
+					<th>Exchanges (Nome)</th>
 					<th>Valor (R$)</th>
-					<th>Quantidade</th>
+					<th>Quantidade (BTC)</th>
 				</tr>
 			</thead>
 			<tbody>
