@@ -1,21 +1,53 @@
 <br>
 <div class="row">
 	<div class="col-md-3">
-		<form>
+		<form method="POST">
 			<div class="form-group">
-				<select class="form-control form-control-sm">
-					<option selected> Ordem </option>
+				<select class="form-control form-control-sm" name="order">
 					<option value="bids">BIDS</option>
 					<option value="asks">ASKS</option>
 				</select>
 			</div>
 			<div class="form-group">
-				<select class="form-control form-control-sm">
-					<option selected> Exchange </option>
-					<option value="bids">BIDS</option>
-					<option value="asks">ASKS</option>
+				<select class="form-control form-control-sm" name="exchange">
+					<option value="" > Exchange </option>
+					<option value="ARN"> Arena Bitcoin (ARN) </option>
+          <option value="B2U"> BitcoinToYou (B2U) </option>
+          <option value="BAS"> Basebit (BAS) </option>
+          <option value="BIV"> Bitinvest (BIV) </option>
+          <option value="BSQ"> Bitsquare (BSQ) </option>
+          <option value="FLW"> flowBTC (FLW) </option>
+          <option value="FOX"> FoxBit (FOX) </option>
+          <option value="LOC"> LocalBitcoins (LOC) </option>
+          <option value="MBT"> Mercado Bitcoin (MBT) </option>
+          <option value="NEG"> Negocie Coins (NEG) </option>
+          <option value="PAX"> Paxful (PAX) </option>
 				</select>
 			</div>
+      <div class="form-group">
+        <label class="form-control-label">Valor unitário</label>
+        <div class="row">
+          <div class="col">
+            <input type="number" class="form-control form-control-sm" name="valor_ini" min="0" max="99999">
+          </div>
+          até
+          <div class="col">
+            <input type="number" class="form-control form-control-sm" name="valor_end" min="0" max="99999">
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-control-label">Quantidade</label>
+        <div class="row">
+          <div class="col">
+            <input type="number" class="form-control form-control-sm" name="qtd_ini" step="0.0000005" min="0" max="50">
+          </div>
+          até
+          <div class="col">
+            <input type="number" class="form-control form-control-sm" name="qtd_end" step="0.0000005" min="0" max="50">
+          </div>
+        </div>
+      </div>
 			<button type="submit" class="btn btn-dark">Filtrar</button>
 		</form>
 	</div>
@@ -23,27 +55,19 @@
 		<table class="table table-hover table-inverse">
 			<thead>
 				<tr>
-					<th>Tipo</th>
-					<th>Nome</th>
+					<th>Exchanges</th>
 					<th>Valor (R$)</th>
 					<th>Quantidade</th>
-					<th>BRXBT</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<th scope="row">1</th>
-					<td>Mark</td>
-					<td>Otto</td>
-					<td>@mdxo</td>
-					<td>@mdxo</td>
-				</tr>
-				<tr>
-					<th scope="row">2</th>
-					<td>Jacob</td>
-					<td>Thornton</td>
-					<td>@fat</td>
-					<td>@fat</td>
+				{{#each data}}
+					<tr>
+						<td>{{0}}</td>
+						<td>{{1}}</td>
+						<td>{{2}}</td>
+					</tr>
+				{{/each}}
 				</tr>
 			</tbody>
 		</table>
