@@ -1,79 +1,82 @@
 <div class="container">
-  <div dir="ltr">
-    <div style="font-size:12.8px">
-      <h1 style="box-sizing:border-box;margin:0px 0px 0.21999rem;font-family:&quot;Source Sans Pro&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-feature-settings:'dlig' 1,'liga' 1,'lnum' 1,'kern' 1;line-height:3rem;padding-top:0.78001rem;color:rgb(55,61,73)">
-        <font size="6">Desafio</font>
-      </h1>
-      <p style="box-sizing:border-box;padding-top:0.66001rem;font-feature-settings:'kern' 1,'onum' 1,'liga' 1;margin-top:0px;margin-bottom:1.33999rem;color:rgb(55,61,73);font-family:Georgia,Cambria,serif;font-size:14px">
-        Cria uma API Restful em NodeJS utilizando framework ou não.
-        <br>
-        <br>A API deve ter como fonte de dados a API de terceiro do&nbsp;
-        <a href="http://bitvalor.com/api" style="color:rgb(160,170,191);background:0px 0px;box-sizing:border-box" target="_blank"
-          data-saferedirecturl="https://www.google.com/url?hl=pt-BR&amp;q=http://bitvalor.com/api&amp;source=gmail&amp;ust=1507822553478000&amp;usg=AFQjCNEPS5VbnKTZW92Yggzvkzt0Lb9JTw">BitValor</a>
-      </p>
-      <h1 style="box-sizing:border-box;margin:0px 0px 0.21999rem;font-family:&quot;Source Sans Pro&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-feature-settings:'dlig' 1,'liga' 1,'lnum' 1,'kern' 1;line-height:3rem;padding-top:0.78001rem;color:rgb(55,61,73)">
-        <font size="4"> Requisitos </font>
-      </h1>
-      <ul style="box-sizing:border-box;margin-bottom:0.83999rem;padding-top:0.16001rem;color:rgb(55,61,73);font-family:Georgia,Cambria,serif;font-size:14px">
-        <li style="margin-left:1rem;box-sizing:border-box;font-feature-settings:'kern' 1,'onum' 1,'liga' 1">
-          Devo conseguir buscar no livro de ofertas (ORDER BOOK) filtrando pelos seguintes critérios:
-          <ul style="box-sizing:border-box;margin-bottom:0px;padding-top:0.16001rem">
-            <li style="margin-left:1rem;box-sizing:border-box;font-feature-settings:'kern' 1,'onum' 1,'liga' 1">
-              Tipo de ordem:&nbsp;
-              <code style="box-sizing:border-box;color:rgb(199,37,78);background-color:rgb(249,242,244);border-radius:4px;padding:2px 4px;font-size:1em;font-family:monospace,monospace">bids</code> &nbsp;ou&nbsp;
-              <code style="box-sizing:border-box;color:rgb(199,37,78);background-color:rgb(249,242,244);border-radius:4px;padding:2px 4px;font-size:1em;font-family:monospace,monospace">asks</code>;
-            </li>
-            <li style="margin-left:1rem;box-sizing:border-box;font-feature-settings:'kern' 1,'onum' 1,'liga' 1">
-              Nome da exchange;
-            </li>
-            <li style="margin-left:1rem;box-sizing:border-box;font-feature-settings:'kern' 1,'onum' 1,'liga' 1">
-              Valor unitário (valor a partir de);
-            </li>
-            <li style="margin-left:1rem;box-sizing:border-box;font-feature-settings:'kern' 1,'onum' 1,'liga' 1">
-              Valor unitário (valor até);
-            </li>
-            <li style="margin-left:1rem;box-sizing:border-box;font-feature-settings:'kern' 1,'onum' 1,'liga' 1">
-              Quantidade (quantidade a partir de);
-            </li>
-            <li style="margin-left:1rem;box-sizing:border-box;font-feature-settings:'kern' 1,'onum' 1,'liga' 1">
-              Quantidade (quantidade até);
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <h1 style="box-sizing:border-box;margin:0px 0px 0.21999rem;font-family:&quot;Source Sans Pro&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-feature-settings:'dlig' 1,'liga' 1,'lnum' 1,'kern' 1;line-height:3rem;padding-top:0.78001rem;color:rgb(55,61,73)">
-        <font size="4">
-          <span style="background-image:initial;background-position:0px 0px;background-size:initial;background-repeat:initial;background-origin:initial;background-clip:initial">
-            <a id="m_-2734349892482038027gmail-m_410412912966214476gmail-Definio_de_pronto_18" style="color:rgb(160,170,191);box-sizing:border-box;background:0px 0px;text-decoration-line:underline"></a>
-          </span>Definição de pronto</font>
-      </h1>
-      <ul style="box-sizing:border-box;margin-bottom:0.83999rem;padding-top:0.16001rem;color:rgb(55,61,73);font-family:Georgia,Cambria,serif;font-size:14px">
-        <li style="margin-left:1rem;box-sizing:border-box;font-feature-settings:'kern' 1,'onum' 1,'liga' 1">Deve haver um documento de definições de como rodar o projeto;</li>
-        <li style="margin-left:1rem;box-sizing:border-box;font-feature-settings:'kern' 1,'onum' 1,'liga' 1">Deve haver a documentação de como executar a chamada, endereço e nome dos parâmetros;</li>
-      </ul>
-      <h1 style="box-sizing:border-box;margin:0px 0px 0.21999rem;font-family:&quot;Source Sans Pro&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-feature-settings:'dlig' 1,'liga' 1,'lnum' 1,'kern' 1;line-height:3rem;padding-top:0.78001rem;color:rgb(55,61,73)">
-        <font size="4">
-          <span style="background-image:initial;background-position:0px 0px;background-size:initial;background-repeat:initial;background-origin:initial;background-clip:initial">
-            <a id="m_-2734349892482038027gmail-m_410412912966214476gmail-Critrios_de_avaliao_23" style="color:rgb(160,170,191);box-sizing:border-box;background:0px 0px;text-decoration-line:underline"></a>
-          </span>Critérios de avaliação</font>
-      </h1>
-      <ul style="box-sizing:border-box;margin-bottom:0.83999rem;padding-top:0.16001rem;color:rgb(55,61,73);font-family:Georgia,Cambria,serif;font-size:14px">
-        <li style="margin-left:1rem;box-sizing:border-box;font-feature-settings:'kern' 1,'onum' 1,'liga' 1">Organização do projeto: Avalia a estrutura do projeto, documentação e uso de controle de versão;</li>
-        <li style="margin-left:1rem;box-sizing:border-box;font-feature-settings:'kern' 1,'onum' 1,'liga' 1">Inovação tecnológica: Avalia o uso de tecnologias mais recentes, desde que estáveis;</li>
-        <li style="margin-left:1rem;box-sizing:border-box;font-feature-settings:'kern' 1,'onum' 1,'liga' 1">Coerência: Avalia se os requisitos foram atendidos;</li>
-        <li style="margin-left:1rem;box-sizing:border-box;font-feature-settings:'kern' 1,'onum' 1,'liga' 1">Boas práticas: Avalia se o projeto segue boas práticas de desenvolvimento, incluindo segurança e otimização;</li>
-        <li style="margin-left:1rem;box-sizing:border-box;font-feature-settings:'kern' 1,'onum' 1,'liga' 1">Controle de qualidade: Avalia se o projeto possui qualidade assegurada por testes automatizados.</li>
-      </ul>
-      <h1 style="box-sizing:border-box;margin:0px 0px 0.21999rem;font-family:&quot;Source Sans Pro&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-feature-settings:'dlig' 1,'liga' 1,'lnum' 1,'kern' 1;line-height:3rem;padding-top:0.78001rem;color:rgb(55,61,73)">
-        <font size="4">
-          <span style="background-image:initial;background-position:0px 0px;background-size:initial;background-repeat:initial;background-origin:initial;background-clip:initial">
-            <a id="m_-2734349892482038027gmail-m_410412912966214476gmail-Processo_de_submisso_31" style="color:rgb(160,170,191);box-sizing:border-box;background:0px 0px;text-decoration-line:underline"></a>
-          </span>Processo de submissão</font>
-      </h1>
-      <p style="box-sizing:border-box;padding-top:0.66001rem;font-feature-settings:'kern' 1,'onum' 1,'liga' 1;margin-top:0px;margin-bottom:1.33999rem;color:rgb(55,61,73);font-family:Georgia,Cambria,serif;font-size:14px">O desafio deve ser entregue pelo GitHub, basta responder este e-mail com o link para o repositório.
-        <br>
-        <br style="box-sizing:border-box"> Não se esqueça de descrever os passos e requisitos para rodar o projeto em outras máquinas.
-      </p>
-    </div>
-  </div>
+  <article class="markdown-body entry-content" itemprop="text">
+    <h1>
+      <a href="#teste-backend" aria-hidden="true" class="anchor" id="user-content-teste-backend">
+        <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+          <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+        </svg>
+      </a>Teste Backend</h1>
+      <hr>
+    <h2>
+      <a href="#para-rodar-o-projeto" aria-hidden="true" class="anchor" id="user-content-para-rodar-o-projeto">
+        <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+          <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+        </svg>
+      </a>Para rodar o projeto:</h2>
+    <ul>
+      <li>clone ou baixe o projeto</li>
+      <li>pelo terminal execute o comando
+        <code>npm install</code> na raiz do projeto</li>
+      <li>em seguida execute
+        <code>npm start</code>
+      </li>
+    </ul>
+    <h2>
+      <a href="#requisitos" aria-hidden="true" class="anchor" id="user-content-requisitos">
+        <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+          <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+        </svg>
+      </a>Requisitos</h2>
+      <hr>
+    <ul>
+      <li>instalar
+        <a href="https://nodejs.org/en/download/">nodejs</a>
+      </li>
+    </ul>
+    <h2>
+      <a href="#rotas-do-projeto" aria-hidden="true" class="anchor" id="user-content-rotas-do-projeto">
+        <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+          <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+        </svg>
+      </a>Rotas do Projeto</h2>
+      <hr>
+    <ul>
+      <li>
+        <p>Index (
+          <a href="http://localhost:3000/">http://localhost:3000/</a>) Rota inicial do projeto, com instruções.</p>
+      </li>
+      <li>
+        <p>Compras (
+          <a href="http://localhost:3000/compras">http://localhost:3000/compras</a>) Rota para listar os OrderBooks de
+          <code>bids</code>. Com o filtro de</p>
+        <ul>
+          <li>
+            <code>Exchange</code>
+          </li>
+          <li>
+            <code>Valor unitário</code>
+          </li>
+          <li>
+            <code>Quantidade</code>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>Vendas (
+          <a href="http://localhost:3000/vendas">http://localhost:3000/vendas</a>) Rota para listar os OrderBooks de
+          <code>asks</code>. Com o filtro de</p>
+        <ul>
+          <li>
+            <code>Exchange</code>
+          </li>
+          <li>
+            <code>Valor unitário</code>
+          </li>
+          <li>
+            <code>Quantidade</code>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </article>
 </div>
