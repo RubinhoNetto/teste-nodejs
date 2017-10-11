@@ -1,5 +1,4 @@
 const axios = require('axios');
-const res = require('../../../../order_book4.json');
 
 /**
  * Model: orderbook
@@ -17,7 +16,7 @@ module.exports = {
   get: (type, filterParam) => {
     return new Promise((resolve) => {
       axios
-        .get('https://api.bitvalor.com/v1/order_book.json')
+        .get('http://api.bitvalor.com/v1/order_book.json')
         .then((res) => {
           // Result da busca na API
           let dataResult = JSON.parse(JSON.stringify(res.data[type]));
