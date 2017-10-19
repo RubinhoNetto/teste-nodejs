@@ -43,22 +43,36 @@ module.exports = {
       .get(type, filter)
       .then((resultData) => {
         if (resultData) {
-          dataReturn.data = resultData.map((elem, key) => {
-            elem[0] = fnGetNameExchanges(elem[0]);
-            return elem;
-          });
+          if (Array.isArray(type)) {
+            type.map((typeBook) => {
+              // Tratando os nomes
+              resultData[typeBook].map((elem, key) => {
+                elem[0] = fnGetNameExchanges(elem[0]);
+                return elem;
+              });
+              // Contagem de resultados
+              dataReturn.message += `Foram encontrados ${resultData[typeBook].length} registros de ${typeBook}. `;
+            });
+            
+          } else {
+            // Contagem de resultados
+            dataReturn.message = `Foram encontrados ${resultData.length} registros.`;
+            // Tratando os nomes
+            resultData.map((elem, key) => {
+              elem[0] = fnGetNameExchanges(elem[0]);
+              return elem;
+            });
+          }
         }
-        // Contagem de resultados
-        dataReturn.message = `Foram encontrados ${resultData.length} registros.`;
+
         // Populando o data
         dataReturn.data = resultData;
-
+        
         return res.json(dataReturn);
-      })
-      .catch((err) => {
+      }, (err) => {
         dataReturn.result = false;
-        dataReturn.message = 'Ocorreu um erro ao filtrar os dados. Tente Novamente!';
-
+        dataReturn.message = 'Ocorreu um erro ao filtrar os dados. Verifique seus parametros.';
+  
         return res.status(500).json(dataReturn);
       });
   },

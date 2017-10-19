@@ -18,25 +18,23 @@ module.exports = {
       axios
         .get('http://api.bitvalor.com/v1/order_book.json')
         .then((res) => {
-          let arrayResult = [];
+          let arrayResult = {};
 
           try {
             if (Array.isArray(type)) {
-              type.forEach((typeBook) => {
-                arrayResult[typeBook] = filterElements(res.data[typeBook], filterParam);
+              type.map((typeBook) => {
+                arrayResult[`${typeBook}`] = filterElements(res.data[typeBook], filterParam);
               });
             } else {
               arrayResult = filterElements(res.data[type], filterParam);
             }
             // callback do Promise
             resolve(arrayResult);
-          } catch (e) {
-            reject(e);
+          } catch (err) {
+            // callback de erro
+            reject(err);
           }
         });
-    })
-    .catch((err) => {
-      return [];
     });
   },
 }
