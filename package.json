@@ -12,7 +12,6 @@
     "axios": "^0.16.2",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "express-handlebars": "^3.0.0",
     "express-query-int": "^2.0.0"
   },
   "devDependencies": {

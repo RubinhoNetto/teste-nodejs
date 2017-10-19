@@ -8,16 +8,9 @@ const controllers ={
     orderbook: require('../controllers/orderbook'), 
 } 
 
-// Index do projeto
-router.get('/', controllers.orderbook.index);
-
-// Rota de Compras
-router.post('/compras', controllers.orderbook.listBids);
-router.get('/compras', controllers.orderbook.listBids);
-
-// Rota de Vendas
-router.post('/vendas', controllers.orderbook.listAsks);
-router.get('/vendas', controllers.orderbook.listAsks);
+// Rota
+router.get('/', controllers.orderbook.filter);
+router.get('/:type', controllers.orderbook.filter);
 
 
 /**
