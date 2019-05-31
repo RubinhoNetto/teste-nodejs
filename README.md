@@ -13,7 +13,7 @@
     Rota inicial do projeto, tras todos os resultados de asks e bids, podendo tbm filtrar os outros parametros.
 
 - Routes
-    - (http://localhost:3000/asks) ou (http://localhost:3000/bids) para filtrar os Tipo de ordem.
+    - (http://localhost:3000/asks) ou (http://localhost:3000/bids) para filtrar os Tipo de ordemaa.
 
 - Query - Ex: (http://localhost:3000/asks?exchange=NEG&valor_end=17000)
     - exchange
